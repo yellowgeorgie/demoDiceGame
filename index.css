@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+body, main, .controlBox {
+    display: flex;
+}
+
+body, main {
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(125deg, rgb(248, 66, 66), rgb(129, 28, 129));
+    align-items: center;
+}
+
+main {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    border-radius: 0.5em;
+}
+
+.gameBox {
+    width: 50%;
+    height: 100%;
+    background-color: pink;
+    opacity: 0.60;
+    z-index: 0;
+}
+
+.playerScore {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.playerScore h3 {
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+.playerScore h2 {
+    font-size: 50px;
+    font-weight: 100;
+    color: red;
+}
+
+.currentScoreBox {
+    background-color: rgb(254, 62, 94);
+    width: 130px;
+    height: 74px;
+    margin: 0 auto;
+    border-radius: 0.25em;
+    color: white;
+}
+
+.currentScoreBox h4 {
+    padding-top: 12px;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.currentScoreBox p {
+    font-size: 25px;
+    margin-top: 8px;
+    font-weight: bolder;
+}
+
+.controlBox {
+    position: absolute;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+    align-items: center;
+}
+
+button {
+    appearance: none;
+    padding: 8px 15px;
+    letter-spacing: 1px;
+    background-color: white;
+    opacity: 0.85;
+    border-radius: 1.5em;
+    border: none;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+    opacity: 1;
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 3px 0 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+.newGame {
+    margin-top: 20px;
+}
+
+.dieBox {
+    width: 90px;
+    height: 90px;
+    /* background-color: white; */
+    opacity: 0.85;
+    margin-top: 65px;
+    text-align: center;
+    border-radius: 0.25em;
+}
+
+.die {
+    vertical-align: text-top;
+    /* margin-top: 80px; */
+    font-size: 150px;
+    color: red;
+    line-height: 67px;
+}
+
+.rollDice {
+    margin-top: 63px;
+}
+
+.hold {
+    margin-top: 16px;
+    width: 90px;
+}
+
+.chosen {
+    opacity: 1;
+}
+
+span {
+    margin-top: 20px;
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
