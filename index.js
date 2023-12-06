@@ -5,6 +5,8 @@ const die = document.querySelector('.die');
 const dieBox = document.querySelector('.dieBox');
 const span = document.querySelector('span');
 
+// Declaring variables to be used
+
 const player = {
     one: {
         sumDie: 0,
@@ -27,6 +29,8 @@ const dieFace = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 let p1IsPlaying = true;
 let dieRoll = 0;
 
+// Adding the listeners
+
 buttonHold.addEventListener('click', togglePlayer);
 
 buttonRollDie.addEventListener('click', evt => {
@@ -45,6 +49,10 @@ buttonRollDie.addEventListener('click', evt => {
 
 buttonNewGame.addEventListener('click', reset);
 
+// Function declarations
+
+// Toggle mechanics
+
 function togglePlayer() {
     player.one.playing.classList.toggle('chosen');
     player.two.playing.classList.toggle('chosen');
@@ -60,9 +68,13 @@ function togglePlayer() {
     sumDieReset();
 }
 
+// Random number generator given max value
+
 function rando(maxNum) {
     return Math.floor(Math.random() * maxNum) + 1;
 }
+
+// Game mechanics
 
 function playerCheck() {
     if (p1IsPlaying) {
@@ -74,6 +86,8 @@ function playerCheck() {
     }
 }
 
+// Resetting during toggle
+
 function sumDieReset() {
     dieRoll = 0;
     player.one.sumDie = 0;
@@ -81,6 +95,8 @@ function sumDieReset() {
     player.two.sumDie = 0;
     player.two.dieDisplay.textContent = '0';
 }
+
+// Resetting the game
 
 function reset() {
     sumDieReset();
@@ -96,10 +112,14 @@ function reset() {
     buttonRollDie.removeAttribute('disabled');
 }
 
+// Resetting the die
+
 function dieReset() {
     if (!dieRoll) dieBox.style.backgroundColor = 'transparent';
     die.textContent = '';
 }
+
+// Winning the game
 
 function playerWon(str) {
     buttonHold.setAttribute('disabled', true);
